@@ -1,0 +1,21 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  background-color: #395080;
+  color: white;
+  padding: 1em;
+}
+
+.site-header .site-header__title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 1em 0;
+}
+
+.site-header .site-header__toggle {
+  @include sm {
+    display: none;
+  }
+}

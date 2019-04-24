@@ -1,0 +1,65 @@
+#openSideBar {
+  box-sizing: border-box;
+  display: none;
+}
+.toggle {
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 99;
+  height: 22px;
+  width: 22px;
+  top: 4px;
+}
+
+.toggle .toggle__bar {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+}
+
+.toggle .toggle__bar.toggle__bar--middle {
+  transition: all 0.3s;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+.toggle .toggle__bar.toggle__bar--top {
+  transition: all 0.3s;
+  position: relative;
+  float: left;
+}
+
+.toggle .toggle__bar.toggle__bar--bottom {
+  transition: all 0.3s;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .toggle > .toggle__bar.toggle__bar--middle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .toggle > .toggle__bar.toggle__bar--top {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .toggle > .toggle__bar.toggle__bar--bottom {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+

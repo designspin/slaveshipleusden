@@ -1,0 +1,10 @@
+@import 'vars/index';
+@import 'mixins/index';
+@import '~normalize.css/normalize.css'; // reset
+@import 'layout';
+@import 'site-header';
+@import 'toggle-bar';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

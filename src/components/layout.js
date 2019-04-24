@@ -1,13 +1,6 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-
+import { Link } from "gatsby"
 import '../assets/scss/index.scss';
 
 class Layout extends Component {
@@ -47,11 +40,11 @@ class Layout extends Component {
             </label>
             <h1 class="site-header__title">Slave Ship Leusden</h1>
           </header>
-          <nav class="site-nav">
+          <nav id="site-nav" class="site-nav">
             <div class="site-nav__inner">
-              <ul>
-                <li>Home</li>
-                <li>Blog</li>
+              <ul class="site-nav__items">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="page-2">Blog</Link></li>
               </ul>
             </div>
           </nav>

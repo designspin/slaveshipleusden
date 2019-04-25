@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import '../assets/scss/index.scss';
 import Ship from "../assets/svg/ship.svg";
+import CoverImage from "./cover-image";
 
 class Layout extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class Layout extends Component {
               </ul>
             </div>
           </nav>
+          <CoverImage />
           <div className="content">
             { children }
           </div>

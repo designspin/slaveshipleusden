@@ -26,6 +26,24 @@
 }
 
 .section.section--about {
+  border-top: 15px solid $blue;
   background-color: #f3f3f3;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.flex-row.flex-row--50 .flex-item {
+
+  width: 100%;
+
+  @include md {
+    width: 50%;
+  }
+}

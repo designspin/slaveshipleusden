@@ -6,3 +6,7 @@
 @import 'site-header';
 @import 'toggle-bar';
 @import 'containers';
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}

@@ -1,15 +1,8 @@
 @import 'vars/index';
 @import 'mixins/index';
-@import '~normalize.css/normalize.css'; // reset
+//@import '~normalize.css/normalize.css'; // reset
 @import 'layout';
 @import 'cover';
 @import 'site-header';
 @import 'toggle-bar';
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import 'containers';

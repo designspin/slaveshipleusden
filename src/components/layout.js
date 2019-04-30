@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import '../assets/scss/index.scss';
-import Ship from "../assets/svg/ship.svg";
-import CoverImage from "./cover-image";
+import '../assets/scss/index.scss'
+import Ship from '../assets/svg/ship.svg'
 
 class Layout extends Component {
   constructor(props) {
@@ -40,7 +39,7 @@ class Layout extends Component {
               <div className="toggle__bar toggle__bar--middle"></div>
               <div className="toggle__bar toggle__bar--bottom"></div>
             </label>
-            <Ship className="site-header__icon" style={{ width: "2em", height: "auto"}} /> 
+            <Ship className="site-header__icon" style={{ width: "3.5em", height: "auto"}} /> 
             <div>
               <h1 className="site-header__title">Slave Ship Leusden</h1>
               <small className="site-header__desc">A Story of Mutiny, Shipwreck and Murder</small>
@@ -54,7 +53,6 @@ class Layout extends Component {
               </ul>
             </div>
           </nav>
-          <CoverImage />
           <div className="content">
             { children }
           </div>

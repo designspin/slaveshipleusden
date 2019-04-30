@@ -6,7 +6,17 @@
 @import 'site-header';
 @import 'toggle-bar';
 @import 'containers';
+@import 'title';
+@import 'btn';
 
 *, *:after, *:before {
   box-sizing: border-box;
+}
+
+body {
+  font-size: 85%;
+
+  @include md {
+    font-size: 100%;
+  }
 }

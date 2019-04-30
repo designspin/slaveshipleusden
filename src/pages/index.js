@@ -17,7 +17,7 @@ const IndexPage = () => (
     </CoverImage>
     <section className="section section--about">
       <div className="container">
-        <div className="flex-row flex-row--50">
+        <div className="flex-row flex-row--center flex-row--50">
           <div className="flex-item">
             <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style={{'max-width':'100%'}} src="https://read.amazon.co.uk/kp/card?asin=B00J9UMY2O&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_EAkYCb4A0A0XW" ></iframe>
             </div>

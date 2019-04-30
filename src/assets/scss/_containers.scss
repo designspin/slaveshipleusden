@@ -26,24 +26,32 @@
 }
 
 .section.section--about {
-  border-top: 15px solid $blue;
   background-color: #f3f3f3;
 }
 
 .flex-row {
   display: flex;
   flex-direction: column;
+  flex-flow: column-reverse;
 
   @include md {
     flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row;
   }
+}
+
+.flex-row.flex-row--center {
+  align-items: center;
 }
 
 .flex-row.flex-row--50 .flex-item {
 
   width: 100%;
+  margin-bottom: 2em;
 
   @include md {
-    width: 50%;
+    width: calc(50% - 15px);
+
   }
 }

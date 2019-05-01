@@ -1,0 +1,29 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+  }
+}
+
+.reviews__review {
+  font-size: 22px;
+  padding: 1em;
+  margin: 0 .5em 1em .5em;
+  border-radius: 1em;
+  background-color: #fefefe;
+
+  & blockquote {
+    margin: 0;
+    border: 0;
+  }
+}
+
+.reviews__review:first-child {
+  margin-left: 0;
+}
+
+.reviews__review:last-child {
+  margin-right: 0;
+}

@@ -42,7 +42,6 @@ class Layout extends Component {
             <Ship className="site-header__icon" style={{ width: "3.5em", height: "auto"}} /> 
             <div>
               <h1 className="site-header__title">Slave Ship Leusden</h1>
-              <small className="site-header__desc">A Story of Mutiny, Shipwreck and Murder</small>
             </div>
           </header>
           <nav id="site-nav" className="site-nav">

@@ -1,11 +1,13 @@
 @import 'vars/index';
 @import 'mixins/index';
 //@import '~normalize.css/normalize.css'; // reset
+@import '~react-rater/lib/react-rater.scss';
 @import 'layout';
 @import 'cover';
 @import 'site-header';
 @import 'toggle-bar';
 @import 'containers';
+@import 'reviews';
 @import 'title';
 @import 'btn';
 

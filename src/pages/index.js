@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CoverImage from "../components/cover-image"
+import AuthorImage from "../components/author-image"
 import Reviews from "../components/reviews"
 
 const IndexPage = () => (
@@ -24,6 +25,22 @@ const IndexPage = () => (
           </div>
         </div>
         <Reviews />
+      </div>
+    </section>
+    <section className="section section--author">
+      <div className="container">
+        <h2 className="title title--underline">The Author - Leo Balai</h2>
+        <div className="flex-row flex-row--center flex-row--50">
+          <div className="flex-item">
+              <p>Leonard (Leo) Balai (Paramaribo/Suriname 1946) studied law and public administration at the University of Amsterdam.</p>
+              <p>After his graduation he was active in various fields. He was a member of the City Council of Amsterdam for almost 11 years. He took his PhD with a thesis on the slave ship Leusden and the West India Company.</p>
+              <p>In May 2013 he published: Geschiedenis van de Amsterdamse slavenhandel (History of the Amsterdam slave trade). He also published: The last journey of the slave ship Rusthof.</p>
+              <p>Leo Balai is married to Dita Vermeulen; 5 grandchildren; lives in Amsterdam.</p>
+          </div>
+          <div className="flex-item">
+            <AuthorImage />
+          </div>
+        </div>
       </div>
     </section>
   </Layout>

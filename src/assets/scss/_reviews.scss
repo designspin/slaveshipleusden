@@ -10,13 +10,17 @@
 .reviews__review {
   font-size: 22px;
   padding: 1em;
-  margin: 0 .5em 1em .5em;
+  margin: 0 0 1em 0;
   border-radius: 1em;
   background-color: #fefefe;
-
+  border: 1px solid #eee;
   & blockquote {
     margin: 0;
     border: 0;
+  }
+
+  @include lg {
+    margin: 0 .5em 1em .5em;
   }
 }
 

@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Preface from book
+title: Preface from the book
 date: 2019-05-02T22:32:55.952Z
 tags:
   - Preface

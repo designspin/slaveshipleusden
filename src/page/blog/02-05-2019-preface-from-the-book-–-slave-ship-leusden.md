@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Preface from the Book – Slave Ship Leusden
+title: Preface from the Book
 date: 2019-05-02T22:09:56.683Z
 tags:
   - Book Preface

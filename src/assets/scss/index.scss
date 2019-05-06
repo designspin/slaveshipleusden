@@ -1,6 +1,5 @@
 @import 'vars/index';
 @import 'mixins/index';
-//@import '~normalize.css/normalize.css'; // reset
 @import '~react-rater/lib/react-rater.scss';
 @import 'layout';
 @import 'cover';
@@ -10,6 +9,9 @@
 @import 'reviews';
 @import 'title';
 @import 'btn';
+@import 'post';
+@import 'tags';
+@import 'pagination';
 
 *, *:after, *:before {
   box-sizing: border-box;

@@ -17,7 +17,7 @@ const Image = ({ className }) => (
     `}
     render={data => 
       <Img 
-        style={{ 'max-width': '336px', 'margin': '0 auto' }} 
+        style={{ maxWidth: '336px', margin: '0 auto' }} 
         className={className}
         alt="Leo Balai - Author of Slave Ship Leusden"
         fluid={data.placeholderImage.childImageSharp.fluid} />

@@ -1,8 +1,10 @@
 .btn {
   display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
   background: $blue;
   color: white;
-  padding: .2em 1em;
+  padding: .4em 1em;
   border-radius: .5em;
   transition: background-color .3s ease-in-out;
 
@@ -15,4 +17,28 @@
 .btn.btn--buy {
   font-size: 60%;
   vertical-align: middle;
+}
+
+.btn.btn--tag {
+  font-size: 12px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  color: #444;
+  margin-right: 4px;
+  padding: .4em .8em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.btn--tag:hover {
+  background-color: $blue;
+  border-color: $blue;
+  color: white;
+}
+
+.btn.btn--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #c0c0c0;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }

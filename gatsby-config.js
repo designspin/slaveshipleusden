@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/slaveshipleusden",
   siteMetadata: {
     title: `Slave Ship Leusden`,
     description: `Slave Ship Leusden`,
@@ -14,8 +13,50 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${__dirname}/static/img`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms-paths',
+      options: {
+        cmsConfig: 'static/admin/config.yml'
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              cmsConfig: `static/admin/config.yml`
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 600,
+              showCaptions: true,
+              withWebp: true
+            }
+          },
+          'gatsby-remark-copy-linked-files'
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -43,8 +84,10 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography'
       },
     },
+    'gatsby-plugin-netlify-cms',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    'gatsby-plugin-netlify'
   ],
 }

@@ -1,0 +1,26 @@
+.tags__header, .posts__header {
+  margin: 2em 0;
+}
+
+.tags__tags, .posts__posts {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.tags .tags__posts, .posts .posts__posts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: unset;
+    justify-content: space-around;
+  }
+}
+
+.tags .tags__posts .post-card {
+  //max-width: 400px;
+}

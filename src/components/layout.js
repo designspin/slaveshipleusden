@@ -48,7 +48,7 @@ class Layout extends Component {
             <div className="site-nav__inner">
               <ul className="site-nav__items">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/page-2">Blog</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
               </ul>
             </div>
           </nav>

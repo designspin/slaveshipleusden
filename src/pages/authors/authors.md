@@ -1,7 +1,7 @@
 ---
 title: authors
-authors:
-  - bio: >-
+bloggers:
+  - bio: >
       Leonard (Leo) Balai (Paramaribo/Suriname 1946) studied law and public
       administration at the University of Amsterdam.
 

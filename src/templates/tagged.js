@@ -43,18 +43,24 @@ const TagTemplate = (props) => {
   const { tag, page, pages, prev, next, total } = props.pageContext;
   const items = [];
   const posts = props.data.posts.edges;
+  let pageText = "";
 
   posts.forEach((post) => {
     items.push(<PostCard key={post.node.id} data={post}/>)
   });
 
+  if(pages > 1) {
+    pageText = ` - Page ${page} of ${pages}`;
+  }
+
   return (
     <div className="tags container">
       <header className="tags__header">
-        <h1 className="tags__title title title--underline">{ total } post{ total === 1 ? '' : 's'} tagged : &quot;{tag}&quot;</h1>
+        <h1 className="tags__title title title--underline">{ total } post{ total === 1 ? '' : 's'} tagged : &quot;{tag}&quot;{pageText}</h1>
+        <h2><Link className="btn btn--tag" to="/blog/">View All Posts</Link></h2>
       </header>
       <div className="tags__posts">
-      { items }
+       { items }
       </div>
       <Pagination
         page={page}
@@ -71,15 +77,23 @@ const TagTemplate = (props) => {
 const TagsTemplate = (props) => {
   const { category, nodes, page, pages, prev, next, total } = props.pageContext;
 
+  let pageText = "";
+
+  if(pages > 1) {
+    pageText = ` - Page ${page} of ${pages}`;
+  }
+
   return (
     <div className="tags container">
       <header className="tags__header">
-        <h1 className="tags__title title title--underline">View Posts By Tag</h1>
+        <h1 className="tags__title title title--underline">View Posts By Tag{pageText}</h1>
+        <strong><Link className="btn btn--tag" to="/blog/">View All Posts</Link></strong>
       </header>
       <div className="tags__tags">
+        <h2>Tags: </h2>
         { nodes.map((tagName) => {
           return (
-            <h2><Link className="btn btn--tag" to={`${category}/tags/${kebabCase(tagName)}`}>{tagName}</Link></h2>
+            <h4 key={`${category}/tags/${kebabCase(tagName)}`}><Link className="btn btn--tag" to={`/${category}/tags/${kebabCase(tagName)}`}>{tagName}</Link></h4>
           );
         })}
       </div>

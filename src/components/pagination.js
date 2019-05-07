@@ -12,7 +12,7 @@ const Pagination = (props) => {
     prevText: '<< Previous',
     nextText: 'Next >>'
   };
-  console.log(props);
+  
   const myProps = merge({}, defaults, props);
 
   if(myProps.pages > 1) {

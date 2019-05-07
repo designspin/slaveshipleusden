@@ -27,7 +27,7 @@ const createCategoryPages = (createPage, posts) => {
         createPage,
         pathFormatter: path => `/${_.kebabCase(category)}${path !== 1 ? '/' + path : '/'}`,
         component: path.resolve(`src/templates/blog.js`),
-        limit: 3,
+        limit: 12,
         edges: postIds,
         context: { category }
     })
@@ -44,7 +44,7 @@ const createTagPages = (createPage, tags) => {
             createPage,
             pathFormatter: path => `/blog/tags/${_.kebabCase(tag)}${path !== 1 ? '/' + path : '/'}`,
             component: path.resolve(`src/templates/tagged.js`),
-            limit: 3,
+            limit: 50,
             edges: postIds,
             context: {
                 category,

@@ -19,3 +19,16 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Main Image", name: "mainImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/pages/gallery"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Image", name: "gallery-image", widget: "image"}
+          - {label: "Description", name: "gallery-image-desc", widget: "text"}

@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Preface from the book
+author: Leo Balai
 date: 2019-05-02T22:32:55.952Z
 tags:
   - Preface

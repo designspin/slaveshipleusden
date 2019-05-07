@@ -25,9 +25,9 @@ collections:
     folder: "src/pages/authors"
     create: true
     slug: "{{slug}}"
-    identifier_field: id
+    identifier_field: author_id
     fields:
-      - {label: "Name", name: "id", widget: "string"}
+      - {label: "Name", name: "author_id", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Bio", name: "bio", widget: "text"}
   - name: "blog"
@@ -42,9 +42,9 @@ collections:
         name: "author"
         widget: "relation"
         collection: "authors"
-        searchFields: ["bloggers.id"]
-        valueField: "blogger.id"
-        displayFields: ["id"]
+        searchFields: ["author_id"]
+        valueField: "author_id"
+        displayFields: ["author_id"]
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Description", name: "description", widget: "text"}

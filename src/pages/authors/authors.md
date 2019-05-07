@@ -1,5 +1,5 @@
 ---
-id: Leo Balai
+author_id: Leo Balai
 image: /img/leo-balai-2015.jpg
 bio: >
   Leonard (Leo) Balai (Paramaribo/Suriname 1946) studied law and public

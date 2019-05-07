@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Another Test Post
+author: Leo Balai
 date: 2019-05-04T21:30:36.805Z
 tags:
   - Test 1

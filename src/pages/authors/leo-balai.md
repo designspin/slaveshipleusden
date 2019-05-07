@@ -1,4 +1,5 @@
 ---
+templateKey: author-post
 author_id: Leo Balai
 image: /img/leo-balai-2015.jpg
 bio: >-

@@ -14,6 +14,17 @@ export const BlogPageQuery = graphql`
       frontmatter {
         templateKey
         title
+        author {
+          author_id
+          image {
+            childImageSharp {
+              fixed(width: 100, height: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          bio
+        }
         date(formatString: "DD MMMM, YYYY")
         tags
         description

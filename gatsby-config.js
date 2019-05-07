@@ -90,4 +90,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-netlify'
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`
+  }
 }

@@ -34,6 +34,9 @@ const IndexPage = () => (
               <p>After his graduation he was active in various fields. He was a member of the City Council of Amsterdam for almost 11 years. He took his PhD with a thesis on the slave ship Leusden and the West India Company.</p>
               <p>In May 2013 he published: Geschiedenis van de Amsterdamse slavenhandel (History of the Amsterdam slave trade). He also published: The last journey of the slave ship Rusthof.</p>
               <p>Leo Balai is married to Dita Vermeulen; 5 grandchildren; lives in Amsterdam.</p>
+              <h4>Update (April 2019)</h4>
+              <p>At the moment I am doing research for a book about a director-general of the Dutch West India Company (WIC). From 1621 – 1738 the WIC was given a monopoly for trade and navigation in the Atlantic  (the Americas and West-Africa) by the Dutch government. During a short period in the 18th century he WIC was one of the worlds most important slave trading organisations. The director-generals were very powerful persons in West-Africa.</p> 
+              <p>In cooperation with professor Jerzy Gawronski (maritime archeologist) we will write an updated  version of the last voyage of the Leusden, based on the research which has been done about the possible wrecksite of the ship.</p>  
           </div>
           <div className="flex-item">
             <AuthorImage />

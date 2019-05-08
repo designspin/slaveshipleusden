@@ -27,6 +27,7 @@ collections:
     slug: "{{slug}}"
     identifier_field: author_id
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author-post"}
       - {label: "Name", name: "author_id", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Bio", name: "bio", widget: "text"}

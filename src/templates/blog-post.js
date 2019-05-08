@@ -15,15 +15,17 @@ export const BlogPageQuery = graphql`
         templateKey
         title
         author {
-          author_id
-          image {
-            childImageSharp {
-              fixed(width: 100, height: 100) {
-                ...GatsbyImageSharpFixed
+          frontmatter {
+            author_id
+            image {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
               }
             }
+            bio
           }
-          bio
         }
         date(formatString: "DD MMMM, YYYY")
         tags
@@ -31,7 +33,7 @@ export const BlogPageQuery = graphql`
         mainImage {
           childImageSharp {
               fluid(maxWidth: 1900) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
               }
               fixed(width: 1200, height: 630) {
                 ...GatsbyImageSharpFixed
@@ -56,7 +58,20 @@ export const Tags = ({tags}) => {
   )
 };
 
-const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainImage }) => {
+export const Author = ({ author_id: name, image, bio }) => {
+  return (
+    <section className="author">
+      <Img
+        className="author__image"
+        alt={name}
+        fixed={image.childImageSharp.fixed} />
+      <h4 className="author__name">About {name}</h4>
+      <div className="author__bio" style={{whiteSpace: 'pre-wrap'}}>{bio}</div>
+    </section>
+  )
+}
+
+const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainImage, author }) => {
   const PostContent = contentComponent || Content;
 
   return (
@@ -74,6 +89,7 @@ const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainIm
           </div>
         </header>
         <PostContent content={content} />
+        <Author {...author} />
       </div>
     </article>
   )
@@ -88,6 +104,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
+        author={post.frontmatter.author.frontmatter}
         mainImage={post.frontmatter.mainImage.childImageSharp.fluid}
         content={post.html.replace('<p><div>', '<div>').replace('</div></p>', '</div>')}
         contentComponent={HTMLContent} />

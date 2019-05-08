@@ -71,9 +71,6 @@ exports.createPages = ({ actions, graphql }) => {
         {
             blog: allMarkdownRemark(
                 limit: 1000
-                filter: {
-                    fileAbsolutePath: { regex: "/blog/" }
-                }
             ) {
                 edges {
                     node {
@@ -106,10 +103,10 @@ exports.createPages = ({ actions, graphql }) => {
             const { tags, templateKey } = node.frontmatter;
             const { id: postId } = node;
             
-            blogObject.posts.push(node);
+            
 
             if(templateKey !== 'blog-post') { return; }
-
+            blogObject.posts.push(node);
             if(tags) {
                 tags.forEach((tag) => {
                     if(tag && tag !== '') {
@@ -127,6 +124,44 @@ exports.createPages = ({ actions, graphql }) => {
         createTagPages(createPage, blogObject.tags);
     });
 }
+
+/*exports.sourceNodes = ({ boundActionCreators, getNodes, getNode }) => {
+    const { createNodeField } = boundActionCreators;
+
+    const authorsOfBlogs = {};
+
+    const getAuthorNodeByName = name => getNodes().find(
+        node2 =>
+            node2.internal.type === 'MardownRemark' &&
+            node2.frontmatter.author_id === name
+    );
+
+    const markdownNodes = getNodes()
+        .filter(node => node.internal.type === 'MarkdownRemark')
+        .forEach(node => {
+            if(node.frontmatter.author) {
+                const authorNodes = node.frontmatter.author instanceof Array
+                    ? node.frontmatter.author.map(getAuthorNodeByName)
+                    : [getAuthorNodeByName(node.frontmatter.author)]
+                
+                authorNodes.filter(authorNode => authorNode).map(authorNode => {
+                    if(!(node.id in authorsOfBlogs)) {
+                        authorsOfBlogs[node.id] = []
+                    }
+
+                    authorsOfBlogs[node.id].push(authorNode.id)
+                })
+            }
+        })
+    
+    Object.entries(authorsOfBlogs).forEach((blogNodeId, authorIds)) => {
+        createNodeField({
+            node: getNode(blogNodeId),
+            name: 'authors',
+            value: authorIds
+        })
+    })
+}*/
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions;

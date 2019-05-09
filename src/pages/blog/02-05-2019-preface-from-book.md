@@ -7,11 +7,8 @@ tags:
   - Preface
   - Test 2
 description: >-
-  Originally published in 2013 in native Dutch, and English version is soon to
-  follow  This book is an adaptation of my scientific research into the history
-  of the Leusden, one of the last slave ships of the West-Indian Company (WIC).
-  This type of vessel was usually deployed for other activities following one or
-  more slave
+  Preface from the book Slave Ship Leusden a Story of Mutiny, Shipwreck and
+  Murder, written by Leo Balai and available for Kindle on Amazon.
 mainImage: /img/ship-wreck.jpg
 ---
 Originally published in 2013 in native Dutch, and English version is soon to follow  This book is an adaptation of my scientific research into the history of the Leusden, one of the last slave ships of the West-Indian Company (WIC). This type of vessel was usually deployed for other activities following one or more slave voyages. The Leusden is an exception and has exclusively undertaken slave voyages from her maiden voyage in 1719 until she foundered in 1738, amounting to ten crossings in total.  During those ten voyages, 6564 captives were embarked; 1639 of whom did not survive the crossing. An additional 102 captives perished in the slave stores prior to being sold, resulting in an overall death count of 1741. This proportion constituted more than a quarter of the number of captives embarked in Africa; an incredible waste of human lives.

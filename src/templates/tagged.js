@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import PostCard from '../components/post-card';
 import Layout from '../components/layout';
 import Pagination from '../components/pagination';
+import Seo from '../components/seo';
 import { kebabCase } from 'lodash';
 
 export const TagQuery = graphql`
@@ -84,6 +85,11 @@ const TagsTemplate = (props) => {
   }
 
   return (
+    <>
+    <Seo
+      title={`View Posts By Tags`} 
+      description={`Read posts by tag name from the Slave Ship Leusden blog`} 
+      location={props.location.path} />
     <div className="tags container">
       <header className="tags__header">
         <h1 className="tags__title title title--underline">View Posts By Tag{pageText}</h1>
@@ -98,6 +104,7 @@ const TagsTemplate = (props) => {
         })}
       </div>
     </div>
+    </>
   )
 }
 

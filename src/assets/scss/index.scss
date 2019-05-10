@@ -12,9 +12,18 @@
 @import 'post';
 @import 'tags';
 @import 'pagination';
+@import 'share';
 
 *, *:after, *:before {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+#___gatsby, div[role=group], #outer-wrap, #inner-wrap {
+  min-height: 100vh;
 }
 
 body {
@@ -23,4 +32,11 @@ body {
   @include md {
     font-size: 100%;
   }
+}
+
+.gatsby-resp-image-figcaption {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 14px;
+  font-style: italic;
 }

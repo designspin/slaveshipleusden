@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, shareimage, location, type }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            siteUrl
+            shareImage
           }
         }
       }
@@ -26,6 +28,8 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const shareImage = shareimage || site.siteMetadata.shareImage
+  const url = site.siteMetadata.siteUrl + ((location) ? location : '');
 
   return (
     <Helmet
@@ -40,6 +44,14 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
         {
+          property: 'og:url',
+          content: url,
+        },
+        {
+          property: 'og:image',
+          content: site.siteMetadata.siteUrl + shareImage,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -49,19 +61,23 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: type || `website`,
         },
         {
           name: `twitter:card`,
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:url`,
+          content: url,
+        },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata.siteUrl + shareImage,
         },
         {
           name: `twitter:description`,

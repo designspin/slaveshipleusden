@@ -2,8 +2,10 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/content'
+import Layout from '../components/layout';
+import Content, { HTMLContent } from '../components/content';
+import Seo from '../components/seo';
+import Share from '../components/share';
 import kebabCase from 'lodash/kebabCase';
 
 export const BlogPageQuery = graphql`
@@ -46,6 +48,11 @@ export const BlogPageQuery = graphql`
         tagPaths
       }
     }
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
   }
 `;
 
@@ -71,17 +78,23 @@ export const Author = ({ author_id: name, image, bio }) => {
   )
 }
 
-const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainImage, author }) => {
+const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainImage, author, description, location, ...props }) => {
   const PostContent = contentComponent || Content;
 
   return (
+    <>
+    <Seo
+      title={title}  
+      description={description}
+      location={location.pathname} 
+      shareimage={mainImage.fixed.src} />
     <article className="post">
       <div className="container">
         <header className="post__header">
           <Img
             className="post__featured"
             alt={title}
-            sizes={mainImage} />
+            sizes={mainImage.fluid} />
           <h1 className="post__title title title--underline">{title}</h1>
           <div className="post__meta">
             <span><strong>Posted On: </strong><time>{date}</time></span> 
@@ -89,25 +102,31 @@ const BlogPostTemplate = ({ title, date, tags, content, contentComponent, mainIm
           </div>
         </header>
         <PostContent content={content} />
-        <Author {...author} />
+        <footer>
+          <div style={{ textAlign: 'center', marginTop: '4em'}}><Share url={props.data.site.siteMetadata.siteUrl + location.pathname} text={`Share This: `} /></div>
+          <Author {...author} />
+        </footer>
       </div>
     </article>
+    </>
   )
 };
 
-const BlogPost = ({ data }) => {
+const BlogPost = (props) => {
+  const { data } = props;
   const { post } = data;
-
+  
   return (
     <Layout>
       <BlogPostTemplate
         title={post.frontmatter.title}
+        description={post.frontmatter.description}
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         author={post.frontmatter.author.frontmatter}
-        mainImage={post.frontmatter.mainImage.childImageSharp.fluid}
+        mainImage={post.frontmatter.mainImage.childImageSharp}
         content={post.html.replace('<p><div>', '<div>').replace('</div></p>', '</div>')}
-        contentComponent={HTMLContent} />
+        contentComponent={HTMLContent} {...props}/>
     </Layout>
   )
 };

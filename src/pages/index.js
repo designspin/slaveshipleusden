@@ -7,7 +7,7 @@ import Reviews from "../components/reviews"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`Slavery`, `Shipwreck`, `Slave Ship Leusden`]} />
     <CoverImage className="cover">
       <h2 className="cover__description">A Story of Mutiny, Shipwreck and Murder</h2>
     </CoverImage>

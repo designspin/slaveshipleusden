@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import PostCard from '../components/post-card';
 import Pagination from '../components/pagination';
+import Seo from '../components/seo';
 
 export const CategoryQuery = graphql`
   query CategoryQuery($nodes: [String]) {
@@ -41,6 +42,7 @@ const BlogCatTemplate = (props) => {
   const { category, page, prev, next, pages, total } = props.pageContext;
   const posts = props.posts;
   const items = [];
+  
   let pageText = "";
 
   posts.forEach((post) => {
@@ -50,10 +52,18 @@ const BlogCatTemplate = (props) => {
   if(pages > 1) {
     pageText = ` - Page ${page} of ${pages}`;
   }
+
+  const title = `${ total } Blog Post${ total === 1 ? '' : 's'}${pageText}`;
+  
   return (
+    <>
+    <Seo
+      title={`Blog`} 
+      description={`Read posts from the Slave Ship Leusden blog`} 
+      location={props.location.pathname} />
     <div className="posts container">
       <header className="posts__header">
-        <h1 className="posts__title title title--underline">{ total } Blog Post{ total === 1 ? '' : 's'}{pageText}</h1>
+        <h1 className="posts__title title title--underline">{ title }</h1>
         <h2><Link className="btn btn--tag" to="/blog/tags/">View By Tags</Link></h2>
       </header>
       <div className="posts__posts">
@@ -68,6 +78,7 @@ const BlogCatTemplate = (props) => {
         prevText="Prev"
         nextText="Next" />
     </div>
+    </>
   );
 };
 

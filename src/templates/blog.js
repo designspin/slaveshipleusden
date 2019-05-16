@@ -39,7 +39,7 @@ export const CategoryQuery = graphql`
 `;
 
 const BlogCatTemplate = (props) => {
-  const { category, page, prev, next, pages, total } = props.pageContext;
+  const { page, prev, next, pages, total } = props.pageContext;
   const posts = props.posts;
   const items = [];
   
@@ -84,7 +84,7 @@ const BlogCatTemplate = (props) => {
 
 const BlogCat = (props) => {
   const { data } = props;
-  const post = props.data.post.edges;
+  const post = data.post.edges;
   
   return (
     <Layout>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
 import PostCard from '../components/post-card';
 import Layout from '../components/layout';
 import Pagination from '../components/pagination';
@@ -103,13 +102,21 @@ const TagsTemplate = (props) => {
           );
         })}
       </div>
+      <Pagination
+        page={page}
+        pages={pages}
+        prev={prev}
+        next={next}
+        total={total}
+        prevText="Prev"
+        nextText="Next" />
     </div>
     </>
   )
 }
 
 const TagPage = (props) => {
-  const { tag, category } = props.pageContext;
+  const { tag } = props.pageContext;
   const { meta } = props.data;
 
   if(tag) {

@@ -1,0 +1,38 @@
+.contact-form {
+  display: block;
+  max-width: 450px;
+  color: white;
+  font-size: 16px;
+  label {
+    display: block;
+    border-radius: .2em;
+    background-color: #414141;
+    padding: .8em;
+    margin-bottom: .4em;
+  }
+
+  input, textarea {
+    display: block;
+    margin-top: .4em;
+    width: 100%;
+    outline: 0;
+    border: 1px solid transparent;
+    padding: .4em;
+
+    &:focus {
+      border: 1px solid aquamarine;
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  .title.title--underline {
+    border-color: #414141;
+  }
+
+  .btn {
+    background-color: #414141;
+  }
+}

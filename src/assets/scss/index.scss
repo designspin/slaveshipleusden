@@ -1,9 +1,12 @@
 @import 'vars/index';
 @import 'mixins/index';
 @import '~react-rater/lib/react-rater.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 @import 'layout';
 @import 'cover';
 @import 'site-header';
+@import 'site-footer';
+@import 'contact-form';
 @import 'toggle-bar';
 @import 'containers';
 @import 'reviews';

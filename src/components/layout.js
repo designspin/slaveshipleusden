@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import '../assets/scss/index.scss'
 import Ship from '../assets/svg/ship.svg'
+import Form from './contact-form';
+import Gallery from './gallery';
 
 class Layout extends Component {
   constructor(props) {
@@ -55,6 +57,17 @@ class Layout extends Component {
           <div className="content">
             { children }
           </div>
+          <footer className="site-footer">
+            <div className="container">
+              <Form />
+              <Gallery />
+            </div>
+            <div className="site-footer__copy">
+              <div className="container">
+                <p>Slave Ship Leusden &copy; {new Date().getFullYear()}. All Rights Reserved.</p>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     );

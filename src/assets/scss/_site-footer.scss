@@ -1,0 +1,17 @@
+.site-footer {
+  display: block;
+  padding: 2em 0 0 0;
+  margin-top: 2em;
+  background-color: #444;
+}
+
+.site-footer__copy {
+  background-color: black;
+  margin-top: 2em;
+  padding: 2em;
+  color: white;
+
+  p {
+    margin-bottom: 0;
+  }
+}

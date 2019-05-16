@@ -38,7 +38,7 @@ export const BlogPageQuery = graphql`
                   ...GatsbyImageSharpFluid_withWebp
               }
               fixed(width: 1200, height: 630) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp
               }
           }
         }

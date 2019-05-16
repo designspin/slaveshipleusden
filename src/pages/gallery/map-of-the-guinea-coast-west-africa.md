@@ -1,7 +1,7 @@
 ---
 title: 'Map of the Guinea Coast, West Africa'
-gallery-image: /img/1a-map-of-the-guinea-coast.jpg
-gallery-image-desc: >-
+image: /img/1a-map-of-the-guinea-coast.jpg
+description: >-
   Map of West African (Guinea) coast with the most important forts and factories
   (trading stations) during the period of the trans-Atlantic slave trade.
 ---

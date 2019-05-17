@@ -23,3 +23,13 @@ By carrying out the scout in April gave us the information we needed to determin
 **August 14th - 24th, 2013**
 
 After our previous visit in April it was decided that a reconnaissance test survey would be possible.
+
+A plan to undertake a reconnaissance test survey in the summer was formed early 2013 by the team. The aim of the test survey was to assess the feasibility of mobilising a full marine survey to locate the wrecked Leusden in the future.
+
+The test survey was financially supported by the Dutch Centre for International Cultural Cooperation in Amsterdam, the Maritime Programme of Cultural Heritage an Agency of the Netherlands and the royal Dutch Embassy in Paramaribo. Survey equipment and expertise was provided by Plymouth university through the support of MSc. Hydrography students Arthur Laloe and James Hancock. The project was locally coordinated in Suriname by Mrs Cynthia McLeod, Paramaribo.
+
+![Slave Ship Leusden - Survey Site](/img/image2.jpeg "Survey Site")
+
+The Suriname Ministry of Foreign Affairs (BUZA) granted permission to execute a survey in the Suriname territory of the Maroni river mouth. The nautical preparations were locally organised in close cooperation with the Maritime Authority of Suriname (MAS). Staff members of MAS attended the survey on site for the first two days. The license for the prospection on French Guiana territory was issued by the Department of Underwater Archaeological Research in Marseille (DRASSM), responsible for the French underwater cultural heritage and by the direction of Guyana Cultural Affairs who are responsible for the archeology of French Guiana.
+
+The results of the test survey lead us to believe that a new more extensive survey will give us enough information to lead us to the precise location of the Leusden wreck.

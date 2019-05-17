@@ -6,7 +6,7 @@ date: 2019-05-17T17:47:28.552Z
 tags:
   - News
 description: 'An information update on the Slave Ship Leusden, 2013 to present (2019).'
-mainImage: /img/ship-wreck.jpg
+mainImage: /img/image1-2.jpeg
 ---
 The last time I informed my readers about the slave ship Leusden was back in 2014; This doesn't mean nothing has been happening, it's just that sometimes I feel it is better to wait until there is real news to report. I think this is a good moment to do just that.
 

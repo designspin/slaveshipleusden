@@ -3,6 +3,30 @@
   padding: 2em 0 0 0;
   margin-top: 2em;
   background-color: #444;
+  color: white;
+
+  .title.title--underline {
+    border-color: #414141;
+  }
+}
+
+.site-footer div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.site-footer .contact, .site-footer .social {
+  width: 100%;
+  margin-bottom: 2em;
+  @include md {
+    max-width: 45%;
+  }
+  
 }
 
 .site-footer__copy {

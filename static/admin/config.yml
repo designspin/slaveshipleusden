@@ -54,13 +54,9 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/pages/gallery"
+    slug: "{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - label: "Gallery"
-        name: "gallery"
-        widget: "list"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Image", name: "gallery-image", widget: "image"}
-          - {label: "Description", name: "gallery-image-desc", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}

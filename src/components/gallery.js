@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Gallery from 'react-image-gallery';
 
 export default () => {
@@ -13,12 +14,18 @@ export default () => {
     edges {
       node {
         frontmatter {
-          title 
-          gallery {
-            gallery_image 
-            gallery_image_desc
+            image {
+              childImageSharp {
+                fluid(maxWidth: 960, maxHeight: 640) {
+                  ...GatsbyImageSharpFluid
+                }
+                fixed(width: 100, height: 70) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            description
             title
-          } 
         }
       }
     }
@@ -27,15 +34,26 @@ export default () => {
   `)
 
   const { edges } = data.allMarkdownRemark;
-  console.log(edges);
-  const images = edges[0].node.frontmatter.gallery.map((g) => {
-    console.log(g);
+  
+  const images = edges.map((g) => {
     return {
-     original: g["gallery_image"] 
+     /*renderItem: (item) => <div className="image-gallery-image">
+      <Img fluid={g.node.frontmatter.image.childImageSharp.fluid} />
+      {
+        item.description &&
+        <span className="image-gallery-description">
+          {item.description}
+        </span>
+      }
+      </div>,*/
+     original: g.node.frontmatter.image.childImageSharp.fluid.src,
+     srcSet: g.node.frontmatter.image.childImageSharp.fluid.srcSet,
+     sizes: g.node.frontmatter.image.childImageSharp.fluid.sizes,
+     thumbnail: g.node.frontmatter.image.childImageSharp.fixed.src
     }
   });
 
   return (
-    <Gallery items={images} />
+    <Gallery items={images} showBullets={true} thumbnailPosition="bottom"/>
   )
 }

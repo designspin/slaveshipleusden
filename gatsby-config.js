@@ -4,7 +4,8 @@ module.exports = {
     description: `This book is an adaptation of Leo Balai's scientific research into the history of the Slave Ship Leusden, one of the last slave ships of the West Indian Company.`,
     author: ``,
     siteUrl: `https://serene-roentgen-874893.netlify.com`,
-    shareImage: `/img/share-default.jpg`
+    shareImage: `/img/share-default.jpg`,
+    facebook: `https://www.facebook.com/The-Slave-Ship-Leusden-1450426695179198/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -86,7 +87,6 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography'
       },
     },
-    'gatsby-plugin-netlify-cms-paths',
     'gatsby-plugin-netlify-cms',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

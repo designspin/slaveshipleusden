@@ -1,7 +1,7 @@
 @import 'vars/index';
 @import 'mixins/index';
 @import '~react-rater/lib/react-rater.scss';
-@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 @import 'layout';
 @import 'cover';
 @import 'site-header';
@@ -37,6 +37,26 @@ body {
   }
 }
 
+.image-gallery {
+  box-sizing: unset;
+}
+.image-gallery * {
+  box-sizing: unset;
+}
+.image-gallery img {
+  margin-bottom: 0;
+  max-width: unset;
+  margin-left: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  padding-left: unset;
+  padding-right: unset;
+  padding-top: unset;
+}
+
+.image-gallery-thumbnail {
+  overflow: hidden;
+}
 .gatsby-resp-image-figcaption {
   text-align: center;
   margin-top: 2px;

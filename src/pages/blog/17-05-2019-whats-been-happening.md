@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: What's been happening?
+title: ' Lots has been happening.'
 author: Leo Balai
 date: 2019-05-17T17:47:28.552Z
 tags:

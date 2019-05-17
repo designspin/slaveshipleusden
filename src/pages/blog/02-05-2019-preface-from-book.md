@@ -4,8 +4,7 @@ title: Preface from the book
 author: Leo Balai
 date: 2019-05-02T22:32:55.952Z
 tags:
-  - Preface
-  - Test 2
+  - Book
 description: >-
   Preface from the book Slave Ship Leusden a Story of Mutiny, Shipwreck and
   Murder, written by Leo Balai and available for Kindle on Amazon.

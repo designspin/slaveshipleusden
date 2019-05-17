@@ -66,13 +66,17 @@ class Layout extends Component {
               <div className="social">
                 <h4 className="title title--underline">Visit us on our Facebook Page</h4>
                 <p>For more frequent updates on our investigation into the Slave Ship Leusden, visit us on our Facebook page.</p>
-                
+                <a className="sharingButton__Link" href={`https://www.facebook.com/The-Slave-Ship-Leusden-1450426695179198/`} target="_blank" aria-label="Share On Facebook" rel="noopener noreferrer">
+                    <div className="sharingButton sharingButton_Facebook sharingButton_Small)"><div aria-hidden="true" className="sharingButton__Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                    </div>
+                    </div>
+                </a>
               </div>
             </div>
             <div className="site-footer__copy">
               <div className="container">
                 <p>Slave Ship Leusden &copy; {new Date().getFullYear()}. All Rights Reserved.</p>
-                <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg></div>
               </div>
             </div>
           </footer>

@@ -49,7 +49,8 @@ export default () => {
      original: g.node.frontmatter.image.childImageSharp.fluid.src,
      srcSet: g.node.frontmatter.image.childImageSharp.fluid.srcSet,
      sizes: g.node.frontmatter.image.childImageSharp.fluid.sizes,
-     thumbnail: g.node.frontmatter.image.childImageSharp.fixed.src
+     thumbnail: g.node.frontmatter.image.childImageSharp.fixed.src,
+     description: g.node.frontmatter.description
     }
   });
 

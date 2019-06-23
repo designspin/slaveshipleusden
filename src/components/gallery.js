@@ -16,7 +16,7 @@ export default () => {
         frontmatter {
             image {
               childImageSharp {
-                fluid(maxWidth: 960, maxHeight: 640) {
+                fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
                 }
                 fixed(width: 100, height: 70) {

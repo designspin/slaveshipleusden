@@ -15,6 +15,7 @@
   input, textarea {
     display: block;
     margin-top: .4em;
+    
     width: 100%;
     outline: 0;
     border: 1px solid transparent;
@@ -35,5 +36,16 @@
 
   .btn {
     background-color: #414141;
+  }
+}
+
+.contact-form__element {
+  position: relative;
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
+
+  span {
+    position: absolute;
+    bottom: 0;
   }
 }

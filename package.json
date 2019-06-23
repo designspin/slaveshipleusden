@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "formik": "^1.5.7",
     "gatsby": "^2.3.16",
     "gatsby-background-image": "^0.3.6",
     "gatsby-image": "^2.0.41",
@@ -40,7 +41,8 @@
     "remark-html": "^9.0.0",
     "typography": "^0.16.19",
     "typography-theme-alton": "^0.16.19",
-    "typography-theme-stow-lake": "^0.16.19"
+    "typography-theme-stow-lake": "^0.16.19",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",

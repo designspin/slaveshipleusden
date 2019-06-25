@@ -3,7 +3,7 @@ module.exports = {
     title: `Slave Ship Leusden`,
     description: `This book is an adaptation of Leo Balai's scientific research into the history of the Slave Ship Leusden, one of the last slave ships of the West Indian Company.`,
     author: ``,
-    siteUrl: `https://serene-roentgen-874893.netlify.com`,
+    siteUrl: `https://www.slaveshipleusden.com`,
     shareImage: `/img/share-default.jpg`,
     facebook: `https://www.facebook.com/The-Slave-Ship-Leusden-1450426695179198/`
   },

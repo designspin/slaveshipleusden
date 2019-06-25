@@ -53,6 +53,7 @@ class ContactForm extends Component {
                 <h4 className="title title--underline">Contact Us</h4>
                 <div className="contact-form__element">
                   <input 
+                    aria-label="name"
                     onChange={handleChange}
                     value={values.name}
                     type="text"
@@ -68,6 +69,7 @@ class ContactForm extends Component {
                 </div>
                 <div className="contact-form__element">
                   <input
+                    aria-label="email"
                     onChange={handleChange}
                     value={values.email}
                     type="email"
@@ -82,6 +84,7 @@ class ContactForm extends Component {
                 </div>
                 <div className="contact-form__element">
                   <textarea
+                    aria-label="your message"
                     onChange={handleChange}
                     value={values.content}
                     name="content"

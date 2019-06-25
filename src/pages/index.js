@@ -38,7 +38,7 @@ const IndexPage = () => (
               <p>In May 2013 he published: Geschiedenis van de Amsterdamse slavenhandel (History of the Amsterdam slave trade). He also published: De laatste reis van het slavenschip Rusthof (The last journey of the slave ship Rusthof).</p>
               
               <h4>Update (April 2019)</h4>
-              <p>At the moment I am doing research for a book about a director-general of the Dutch West India Company (WIC). From 1621 – 1738 the WIC was given a monopoly for trade and navigation in the Atlantic  (the Americas and West-Africa) by the Dutch government. During a short period in the 18th century he WIC was one of the worlds most important slave trading organisations. The director-generals were very powerful persons in West-Africa.</p> 
+              <p>I am currently undertaking research for a new book about a director-general of the Dutch West India Company (WIC). From 1621 – 1738 the WIC was given a monopoly for trade and navigation in the Atlantic  (the Americas and West-Africa) by the Dutch government. During a short period in the 18th century he WIC was one of the worlds most important slave trading organisations. The director-generals were very powerful persons in West-Africa.</p> 
               <p>In cooperation with professor Jerzy Gawronski (maritime archeologist) we will write an updated  version of the last voyage of the Leusden, based on the research which has been done about the possible wrecksite of the ship.</p>  
           </div>
           <div className="flex-item">

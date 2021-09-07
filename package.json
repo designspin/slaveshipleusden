@@ -38,7 +38,7 @@
     "react-rater": "^5.0.5",
     "react-typography": "^0.16.19",
     "remark": "^10.0.1",
-    "remark-html": "^9.0.0",
+    "remark-html": "^13.0.2",
     "typography": "^0.16.19",
     "typography-theme-alton": "^0.16.19",
     "typography-theme-stow-lake": "^0.16.19",
